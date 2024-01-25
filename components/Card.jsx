@@ -1,4 +1,4 @@
-
+import song_img from "../public/images/track_8_song_art.png"
 
 const Card = () => {
 
@@ -8,10 +8,10 @@ const Card = () => {
     }
 
     return (
-        <div className="album-card">
-            <img  className="album-image" src="" />
-            <input className="album-comment-field" type="text" placeholder="leave a comment :D" />
-            <button className="album-comment-btn" onClick={handleClick}>SHARE NOW</button>
+        <div className="song-card">
+            <img  className="song-image" src={song_img} />
+            <input className="song-comment-field" type="text" placeholder="leave a comment :D" />
+            <button className="song-comment-btn" onClick={handleClick}>SHARE NOW</button>
         </div>
     )
 }
