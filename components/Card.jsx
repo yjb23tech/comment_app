@@ -4,14 +4,15 @@ const Card = () => {
 
     function handleClick(e) {
         e.preventDefault()
-        console.log("Connection between eventListener and eventHandler has been made")
+        let inputEl = document.getElementById("input-field")
+        console.log(inputEl.value)
     }
 
     return (
-        <div className="song-card">
+        <div className="song-card util-box-border-blue">
             <img  className="song-image" src={song_img} />
-            <input className="song-comment-field" type="text" placeholder="leave a comment :D" />
-            <button className="song-comment-btn" onClick={handleClick}>SHARE NOW</button>
+            <input id="input-field" className="song-comment-field util-box-border-red" type="text" placeholder="leave a comment :D" />
+            <button className="song-comment-btn util-box-border-red" onClick={handleClick}>SHARE NOW</button>
         </div>
     )
 }
