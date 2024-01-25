@@ -1,11 +1,17 @@
+import { db } from "../firebase/firebase.js";
+import { ref, push } from "firebase/database"; 
+
 import song_img from "../public/images/track_8_song_art.png"
 
 const Card = () => {
+
+    const commentsInDb = ref(db, "comments")
 
     function handleClick(e) {
         e.preventDefault()
         let inputEl = document.getElementById("input-field")
         console.log(inputEl.value)
+        push(commentsInDb, inputEl.value)
     }
 
     return (
